@@ -9,7 +9,6 @@ import {
 } from "@mui/material/";
 
 export const SingleItem: React.FC<SingleItemProps> = ({ car, hide }) => {
-  console.log(car);
   const date = new Date(car.date_added);
   const [hours, day, month, year] = [
     date.getHours(),

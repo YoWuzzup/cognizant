@@ -4,8 +4,8 @@ export interface NavBarProps {
 }
 export interface HomeProps {
   setCars(data: object[]): void;
-  data: object[];
   cars: object[];
+  data: object[];
   hide: boolean;
 }
 export interface SingleItemProps {

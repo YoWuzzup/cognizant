@@ -15,10 +15,13 @@ export const App: React.FC = () => {
     // creating a function to make it async and then call it
     async function fetching() {
       await fetchData().then((res: any) => {
+        // set the whole data
         setData(res.data);
       });
     }
+
     fetching();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

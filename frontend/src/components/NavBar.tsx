@@ -16,7 +16,6 @@ import {
 import { ShoppingCart } from "@mui/icons-material/";
 
 // Used default navbar from mui for easy styling
-
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
     right: -3,
