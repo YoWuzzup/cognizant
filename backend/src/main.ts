@@ -11,7 +11,7 @@ async function bootstrap() {
 
   app.use(cookieParser());
   app.enableCors({
-    origin: `http://localhost:3000`,
+    origin: `https://brave-euler-e99b49.netlify.app`,
   });
 
   await app.listen(PORT, () =>
