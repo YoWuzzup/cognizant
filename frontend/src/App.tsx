@@ -7,7 +7,9 @@ import { NavBar } from "./components";
 import { Home, Cart, Item } from "./pages";
 
 export const App: React.FC = () => {
+  const [car, setCar] = useState<Array<object>>([]);
   const [data, setData] = useState<Array<object>>([]);
+  const [cart, setCart] = useState<Array<object>>([]);
   const [cars, setCars] = useState<Array<object>>([]);
   const [hide, setHide] = useState<boolean>(false);
 
@@ -26,7 +28,7 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <NavBar setHide={setHide} hide={hide} />
+      <NavBar setHide={setHide} hide={hide} cartLength={cart.length} />
       <Routes>
         <Route
           path="/"
@@ -34,8 +36,13 @@ export const App: React.FC = () => {
             <Home data={data} cars={cars} setCars={setCars} hide={hide} />
           }
         />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/cars/:id" element={<Item />} />
+        <Route path="/cart" element={<Cart setCart={setCart} cart={cart} />} />
+        <Route
+          path="/cars/:id"
+          element={
+            <Item car={car} setCar={setCar} setCart={setCart} cart={cart} />
+          }
+        />
       </Routes>
     </>
   );

@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+.wrapper {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
 .home_wrapper {
   width: 90%;
   margin: 1rem auto 0;
@@ -19,6 +28,14 @@ code {
   flex-flow: row wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .link {

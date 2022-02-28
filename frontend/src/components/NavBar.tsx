@@ -30,7 +30,11 @@ const pages = {
   cart: { name: "Cart", url: "/cart" },
 };
 
-export const NavBar: React.FC<NavBarProps> = ({ hide, setHide }) => {
+export const NavBar: React.FC<NavBarProps> = ({
+  cartLength,
+  hide,
+  setHide,
+}) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setHide(!hide);
   };
@@ -54,7 +58,7 @@ export const NavBar: React.FC<NavBarProps> = ({ hide, setHide }) => {
             </Link>
             <Link to={pages.cart.url} className="link">
               <IconButton aria-label="cart">
-                <StyledBadge badgeContent={4} color="secondary">
+                <StyledBadge badgeContent={cartLength} color="secondary">
                   <ShoppingCart />
                 </StyledBadge>
               </IconButton>

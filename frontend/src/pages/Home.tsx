@@ -4,6 +4,7 @@ import { HomeProps } from "../interfaces";
 
 export const Home: React.FC<HomeProps> = ({ data, cars, hide, setCars }) => {
   useEffect(() => {
+    // get all cars and sort them in alph
     const allCars = data
       .flatMap((car: any) => car.cars.vehicles)
       .sort((a: any, b: any) => {
