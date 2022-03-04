@@ -41,7 +41,11 @@ export const Item: React.FC<ItemProps> = ({ setCart, setCar, cart, car }) => {
       <div>
         Location: {allInfo?.name}, {allInfo?.cars.location}
       </div>
-      <Button size="small" focusRipple onClick={handleClick}>
+      <Button
+        size="small"
+        focusRipple
+        onClick={handleClick}
+        >
         Add to the Cart
       </Button>
       <div style={{ marginTop: "2rem", color: "red" }}>{err}</div>

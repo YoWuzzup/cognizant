@@ -51,7 +51,7 @@ export const NavBar: React.FC<NavBarProps> = ({
               alignItems: "center",
             }}
           >
-            <Link to={pages.home.url} className="link">
+            <Link to={pages.home.url} className="link" data-testid="link">
               <Button sx={{ my: 2, color: "white", display: "block" }}>
                 {pages.home.name}
               </Button>
@@ -69,6 +69,7 @@ export const NavBar: React.FC<NavBarProps> = ({
               checked={hide}
               onChange={handleChange}
               inputProps={{ "aria-label": "controlled" }}
+              data-testid="checkbox"
               sx={{
                 color: "white",
                 "&.Mui-checked": {

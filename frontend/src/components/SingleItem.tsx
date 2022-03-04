@@ -21,6 +21,7 @@ export const SingleItem: React.FC<SingleItemProps> = ({ car, hide }) => {
     <Card
       sx={{ minWidth: 275 }}
       style={{ display: hide && car.licensed ? "none" : "block" }}
+      data-testid={`listitem-${car._id}`}
     >
       <CardContent>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
