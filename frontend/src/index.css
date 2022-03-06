@@ -41,3 +41,7 @@ code {
 .link {
   text-decoration: none;
 }
+
+a:visited {
+  color: #0000ee;
+}

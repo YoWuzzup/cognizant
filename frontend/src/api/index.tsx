@@ -1,6 +1,7 @@
 import axios from "axios";
 
 // used the file but later moved to the mongoDB
+// const url = `/warehouses.json`;
 const url = `https://cognizanttesting.herokuapp.com/`;
 
 export const fetchData = async () => {

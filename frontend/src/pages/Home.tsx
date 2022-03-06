@@ -17,6 +17,19 @@ export const Home: React.FC<HomeProps> = ({ data, cars, hide, setCars }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
+  if (data.length < 1)
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Loading...
+      </div>
+    );
+
   return (
     <div className="home_wrapper">
       {cars &&
