@@ -6,8 +6,11 @@ import {
   Card,
   CardContent,
 } from "@mui/material/";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Cart: React.FC<CartProps> = ({ cart, setCart }) => {
+  const navigate = useNavigate();
   const totalPrice = cart.reduce((a: any, b: any) => {
     if (a === "object") {
       return a.price + b.price;
@@ -24,6 +27,12 @@ export const Cart: React.FC<CartProps> = ({ cart, setCart }) => {
     setCart(newCart);
   };
 
+  useEffect(() => {
+    if (!cart) {
+      navigate("/");
+    }
+  });
+  
   return (
     <div className="wrapper">
       {cart.map((item: any, index: number) => {
