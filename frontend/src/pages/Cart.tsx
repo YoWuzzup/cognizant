@@ -28,11 +28,11 @@ export const Cart: React.FC<CartProps> = ({ cart, setCart }) => {
   };
 
   useEffect(() => {
-    if (!cart) {
+    if (cart.length < 1) {
       navigate("/");
     }
   });
-  
+
   return (
     <div className="wrapper">
       {cart.map((item: any, index: number) => {
